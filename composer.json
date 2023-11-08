@@ -1,0 +1,5 @@
+{
+    "require": {
+        "json-mapper/json-mapper": "^2.20"
+    }
+}
