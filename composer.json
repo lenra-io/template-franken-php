@@ -1,5 +1,19 @@
 {
+    "autoload": {
+        "psr-4": {
+            "Data\\": "src/classes"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../libs/app-lib-php",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
     "require": {
-        "json-mapper/json-mapper": "^2.20"
+        "lenra/app": "@dev"
     }
 }

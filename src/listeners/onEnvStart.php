@@ -1,5 +1,5 @@
 <?php
-require_once '../classes/Counter.php';
+use Data\Counter;
 
 $user = "global";
 $counterColl = $request->api->data->coll(Counter::class);
