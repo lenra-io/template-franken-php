@@ -408,12 +408,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lenra-io/app-lib-php.git",
-                "reference": "b1ef07a746821bcd13054872d46880a95a96d240"
+                "reference": "8b7e26dbc9e9ae1e90231ee4c1bb2898c3579ffc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lenra-io/app-lib-php/zipball/b1ef07a746821bcd13054872d46880a95a96d240",
-                "reference": "b1ef07a746821bcd13054872d46880a95a96d240",
+                "url": "https://api.github.com/repos/lenra-io/app-lib-php/zipball/8b7e26dbc9e9ae1e90231ee4c1bb2898c3579ffc",
+                "reference": "8b7e26dbc9e9ae1e90231ee4c1bb2898c3579ffc",
                 "shasum": ""
             },
             "require": {
@@ -445,7 +445,7 @@
                 "source": "https://github.com/lenra-io/app-lib-php/tree/main",
                 "issues": "https://github.com/lenra-io/app-lib-php/issues"
             },
-            "time": "2023-11-16T16:54:39+00:00"
+            "time": "2023-11-16T17:10:54+00:00"
         },
         {
             "name": "lenra/internal-api-client",
