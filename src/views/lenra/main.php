@@ -27,6 +27,9 @@ $response->scroll = true;
 $response->spacing = 4;
 $response->crossAxisAlignment = 'center';
 
-// echo '{"_type":"flex","children":[{"_type":"view","name":"lenra.menu"},{"_type":"view","name":"lenra.home"}],"direction":"vertical","scroll":true,"spacing":4,"crossAxisAlignment":"center"}';
+$response = [
+    "_type" => "text",
+    "value" => "coucou"
+]
 
 ?>

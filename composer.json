@@ -6,14 +6,16 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "../../libs/app-lib-php",
-            "options": {
-                "symlink": true
-            }
+            "type": "vcs",
+            "url": "https://github.com/lenra-io/app-lib-php.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/lenra-io/internal-api-client-lib-php.git"
         }
     ],
     "require": {
         "lenra/app": "@dev"
-    }
+    },
+    "minimum-stability": "dev"
 }

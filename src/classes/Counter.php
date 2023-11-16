@@ -1,7 +1,12 @@
 <?php
 namespace Data;
 
-class Counter extends Data {
-    public function __construct(public $user: string = NULL, public $count: int = NULL) {}
+class Counter extends \Lenra\App\Data {
+    public string $user;
+    public int $count;
+    public function __construct(string $user = null, int $count = null) {
+        $this->user = $user;
+        $this->count = $count;
+    }
 }
 ?>

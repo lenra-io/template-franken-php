@@ -1,0 +1,39 @@
+generator:
+  dofigen:
+    builders:
+      - name: composer
+        from: composer
+        adds:
+          - "composer.json"
+          - "composer.lock"
+        script:
+          - composer install --prefer-dist --no-scripts --no-dev
+        caches:
+          - /root/.composer
+      - name: files
+        from: dunglas/frankenphp
+        workdir: /app/public
+        adds:
+          - "src"
+    from: files
+    workdir: /app
+    artifacts:
+      - builder: composer
+        source: /app/vendor
+        destination: /app/vendor
+    cmd:
+      - docker-php-entrypoint
+      - --config
+      - /etc/caddy/Caddyfile
+      - --adapter
+      - caddyfile
+    healthcheck:
+      cmd: curl -f http://localhost:2019/metrics || exit 1
+    envs:
+      SERVER_NAME: :3000
+    ports:
+      - 3000
+    ignores:
+      - "**"
+      - "!/composer.*"
+      - "!/src/"
