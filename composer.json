@@ -1,7 +1,7 @@
 {
     "autoload": {
         "psr-4": {
-            "Data\\": "src/classes"
+            "Data\\": "public/classes"
         }
     },
     "repositories": [

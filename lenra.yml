@@ -1,39 +1,52 @@
 generator:
   dofigen:
     builders:
-      - name: composer
+      - name: composer-install
         from: composer
         adds:
           - "composer.json"
           - "composer.lock"
-        script:
-          - composer install --prefer-dist --no-scripts --no-dev
+        run:
+          - composer install --prefer-dist --no-scripts --no-dev --no-autoloader --no-progress --no-suggest --no-interaction
         caches:
           - /root/.composer
       - name: files
         from: dunglas/frankenphp
         workdir: /app/public
         adds:
-          - "src"
+          - public
+        root: 
+          run:
+            - cp $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
+            - echo 'access.log = /dev/null' >> $PHP_INI_DIR/php.ini
+      - name: composer-autoload
+        from: composer-install
+        artifacts:
+          - builder: files
+            source: /app/public
+            destination: /app/public
+        run: 
+          - composer dump-autoload
     from: files
     workdir: /app
+    adds:
+      - "Caddyfile"
     artifacts:
-      - builder: composer
+      - builder: composer-autoload
         source: /app/vendor
         destination: /app/vendor
     cmd:
       - docker-php-entrypoint
       - --config
-      - /etc/caddy/Caddyfile
+      - /app/Caddyfile
       - --adapter
       - caddyfile
     healthcheck:
       cmd: curl -f http://localhost:2019/metrics || exit 1
-    envs:
-      SERVER_NAME: :3000
     ports:
       - 3000
     ignores:
       - "**"
+      - "!/public/"
       - "!/composer.*"
-      - "!/src/"
+      - "!/Caddyfile"
