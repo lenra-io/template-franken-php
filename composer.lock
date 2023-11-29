@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7bc91607934464c2d43719bacd5bd2f4",
+    "content-hash": "da25f3b5dc52ee8b2b5e0642a03d9e90",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -643,42 +643,37 @@
         },
         {
             "name": "lenra/app",
-            "version": "dev-main",
+            "version": "v1.0.0-beta.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lenra-io/app-lib-php.git",
-                "reference": "b9fb36c7253253b468c5e5eef02a0ec1ce5d50b3"
+                "reference": "dbdf972213c7c6b59bbc28f438ba60627e11965b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lenra-io/app-lib-php/zipball/b9fb36c7253253b468c5e5eef02a0ec1ce5d50b3",
-                "reference": "b9fb36c7253253b468c5e5eef02a0ec1ce5d50b3",
+                "url": "https://api.github.com/repos/lenra-io/app-lib-php/zipball/dbdf972213c7c6b59bbc28f438ba60627e11965b",
+                "reference": "dbdf972213c7c6b59bbc28f438ba60627e11965b",
                 "shasum": ""
             },
             "require": {
                 "jane-php/json-schema-runtime": "^7.5",
                 "json-mapper/json-mapper": "^2.20",
-                "lenra/internal-api-client": "@dev"
+                "lenra/internal-api-client": "^1"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.39",
                 "jane-php/json-schema": "^7.5",
                 "phpunit/phpunit": "^10"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Lenra\\App\\": "src/",
-                    "Lenra\\App\\Response\\View\\": "generated/Response/View",
-                    "Lenra\\App\\Base\\": "generated/Base"
+                    "Lenra\\App\\Base\\": "generated/Base",
+                    "Lenra\\App\\Response\\View\\": "generated/Response/View"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Lenra\\App\\Test\\": "test/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -688,24 +683,29 @@
                 }
             ],
             "description": "Lenra's app server lib",
+            "keywords": [
+                "app",
+                "lenra",
+                "server"
+            ],
             "support": {
-                "source": "https://github.com/lenra-io/app-lib-php/tree/main",
-                "issues": "https://github.com/lenra-io/app-lib-php/issues"
+                "issues": "https://github.com/lenra-io/app-lib-php/issues",
+                "source": "https://github.com/lenra-io/app-lib-php/tree/v1.0.0-beta.6"
             },
-            "time": "2023-11-27T16:46:10+00:00"
+            "time": "2023-11-29T16:09:49+00:00"
         },
         {
             "name": "lenra/internal-api-client",
-            "version": "dev-main",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lenra-io/internal-api-client-lib-php.git",
-                "reference": "86ed42a21b0417454528265ead9b2abb8ea3219a"
+                "reference": "7f78888f4a5236cad44737fa31dd9aaeb0468cff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lenra-io/internal-api-client-lib-php/zipball/86ed42a21b0417454528265ead9b2abb8ea3219a",
-                "reference": "86ed42a21b0417454528265ead9b2abb8ea3219a",
+                "url": "https://api.github.com/repos/lenra-io/internal-api-client-lib-php/zipball/7f78888f4a5236cad44737fa31dd9aaeb0468cff",
+                "reference": "7f78888f4a5236cad44737fa31dd9aaeb0468cff",
                 "shasum": ""
             },
             "require": {
@@ -720,18 +720,13 @@
                 "friendsofphp/php-cs-fixer": "^3.5",
                 "phpunit/phpunit": "^8.0 || ^9.0"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "OpenAPI\\Client\\": "lib/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "OpenAPI\\Client\\Test\\": "test/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -753,10 +748,10 @@
                 "sdk"
             ],
             "support": {
-                "source": "https://github.com/lenra-io/internal-api-client-lib-php/tree/main",
-                "issues": "https://github.com/lenra-io/internal-api-client-lib-php/issues"
+                "issues": "https://github.com/lenra-io/internal-api-client-lib-php/issues",
+                "source": "https://github.com/lenra-io/internal-api-client-lib-php/tree/v1.0.0"
             },
-            "time": "2023-11-22T14:56:26+00:00"
+            "time": "2023-11-29T13:41:59+00:00"
         },
         {
             "name": "myclabs/php-enum",
@@ -827,12 +822,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "e453389866395e57146efe12077458c2d906687d"
+                "reference": "2a5e81f7caae572f096f5cc83d0ef75687127e1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/e453389866395e57146efe12077458c2d906687d",
-                "reference": "e453389866395e57146efe12077458c2d906687d",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/2a5e81f7caae572f096f5cc83d0ef75687127e1c",
+                "reference": "2a5e81f7caae572f096f5cc83d0ef75687127e1c",
                 "shasum": ""
             },
             "require": {
@@ -875,7 +870,7 @@
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
                 "source": "https://github.com/nikic/PHP-Parser/tree/4.x"
             },
-            "time": "2023-11-12T15:49:53+00:00"
+            "time": "2023-11-28T19:10:38+00:00"
         },
         {
             "name": "php-jsonpointer/php-jsonpointer",
@@ -1760,12 +1755,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/serializer.git",
-                "reference": "ff423e8e466cc0b0cc01add8e9494d11abfd906e"
+                "reference": "fbbbb4144b5529c94ac0027edd842cfa5c0145fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/serializer/zipball/ff423e8e466cc0b0cc01add8e9494d11abfd906e",
-                "reference": "ff423e8e466cc0b0cc01add8e9494d11abfd906e",
+                "url": "https://api.github.com/repos/symfony/serializer/zipball/fbbbb4144b5529c94ac0027edd842cfa5c0145fe",
+                "reference": "fbbbb4144b5529c94ac0027edd842cfa5c0145fe",
                 "shasum": ""
             },
             "require": {
@@ -1850,7 +1845,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-11-25T00:26:43+00:00"
+            "time": "2023-11-29T14:34:07+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -1941,12 +1936,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-exporter.git",
-                "reference": "88ffc3ccf955daf96738080bf56232c8e4665041"
+                "reference": "d97726e8d254a2d5512b2b4ba204735d84e7167d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/88ffc3ccf955daf96738080bf56232c8e4665041",
-                "reference": "88ffc3ccf955daf96738080bf56232c8e4665041",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/d97726e8d254a2d5512b2b4ba204735d84e7167d",
+                "reference": "d97726e8d254a2d5512b2b4ba204735d84e7167d",
                 "shasum": ""
             },
             "require": {
@@ -2007,7 +2002,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-11-20T16:43:42+00:00"
+            "time": "2023-11-29T08:40:23+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -2085,9 +2080,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "lenra/app": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -4,18 +4,8 @@
             "Data\\": "public/classes"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/lenra-io/app-lib-php.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/lenra-io/internal-api-client-lib-php.git"
-        }
-    ],
     "require": {
-        "lenra/app": "@dev"
+        "lenra/app": "^1.0.0-beta.1"
     },
     "minimum-stability": "dev"
 }

@@ -12,13 +12,11 @@ generator:
           - /root/.composer
       - name: files
         from: dunglas/frankenphp
-        workdir: /app/public
         adds:
-          - public
+          - "."
         root: 
           run:
-            - cp $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
-            - echo 'access.log = /dev/null' >> $PHP_INI_DIR/php.ini
+            - mv /app/config/php.ini $PHP_INI_DIR/php.ini
       - name: composer-autoload
         from: composer-install
         artifacts:
@@ -28,9 +26,6 @@ generator:
         run: 
           - composer dump-autoload
     from: files
-    workdir: /app
-    adds:
-      - "Caddyfile"
     artifacts:
       - builder: composer-autoload
         source: /app/vendor
@@ -38,7 +33,7 @@ generator:
     cmd:
       - docker-php-entrypoint
       - --config
-      - /app/Caddyfile
+      - /app/config/Caddyfile
       - --adapter
       - caddyfile
     healthcheck:
@@ -49,4 +44,4 @@ generator:
       - "**"
       - "!/public/"
       - "!/composer.*"
-      - "!/Caddyfile"
+      - "!/config/"

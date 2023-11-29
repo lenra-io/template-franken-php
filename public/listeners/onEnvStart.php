@@ -1,15 +1,13 @@
 <?php
 
 use Data\Counter;
-use Lenra\App\Collection;
 
-$user = "global";
-/**
- * @var Collection
- */
-$counterColl = $request->api->data()->coll(Counter::class);
-$counters = $counterColl->find(["user" => $user])->wait();
+function handle(ListenerRequest $request) {
+    $user = "global";
+    $counterColl = $request->api->data()->coll(Counter::class);
+    $counters = $counterColl->find(["user" => $user])->wait();
 
-if (count($counters) == 0) {
-    $counterColl->createDoc(new Counter($user, 0))->wait();
+    if (count($counters) == 0) {
+        $counterColl->createDoc(new Counter($user, 0))->wait();
+    }
 }
