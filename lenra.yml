@@ -24,7 +24,7 @@ generator:
             source: /app/public
             destination: /app/public
         run: 
-          - composer dump-autoload
+          - composer dump-autoload --optimize
     from: files
     artifacts:
       - builder: composer-autoload
