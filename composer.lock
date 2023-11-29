@@ -471,12 +471,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/uri.git",
-                "reference": "ea373a5f01589b3edc1c45f2a0a7321493442634"
+                "reference": "b009e3b8ad4cdd8f54c08564672846e166d96c01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri/zipball/ea373a5f01589b3edc1c45f2a0a7321493442634",
-                "reference": "ea373a5f01589b3edc1c45f2a0a7321493442634",
+                "url": "https://api.github.com/repos/thephpleague/uri/zipball/b009e3b8ad4cdd8f54c08564672846e166d96c01",
+                "reference": "b009e3b8ad4cdd8f54c08564672846e166d96c01",
                 "shasum": ""
             },
             "require": {
@@ -554,7 +554,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-02T04:46:25+00:00"
+            "time": "2023-11-24T15:40:42+00:00"
         },
         {
             "name": "league/uri-interfaces",
@@ -562,12 +562,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/uri-interfaces.git",
-                "reference": "002936c0444951c9125dc932967398edfc3f5a1a"
+                "reference": "bd8c487ec236930f7bbc42b8d374fa882fbba0f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri-interfaces/zipball/002936c0444951c9125dc932967398edfc3f5a1a",
-                "reference": "002936c0444951c9125dc932967398edfc3f5a1a",
+                "url": "https://api.github.com/repos/thephpleague/uri-interfaces/zipball/bd8c487ec236930f7bbc42b8d374fa882fbba0f3",
+                "reference": "bd8c487ec236930f7bbc42b8d374fa882fbba0f3",
                 "shasum": ""
             },
             "require": {
@@ -639,7 +639,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-10T07:48:17+00:00"
+            "time": "2023-11-24T15:40:42+00:00"
         },
         {
             "name": "lenra/app",
@@ -647,12 +647,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lenra-io/app-lib-php.git",
-                "reference": "8a087166ff27b451a751940813f8a59fb7c95084"
+                "reference": "b9fb36c7253253b468c5e5eef02a0ec1ce5d50b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lenra-io/app-lib-php/zipball/8a087166ff27b451a751940813f8a59fb7c95084",
-                "reference": "8a087166ff27b451a751940813f8a59fb7c95084",
+                "url": "https://api.github.com/repos/lenra-io/app-lib-php/zipball/b9fb36c7253253b468c5e5eef02a0ec1ce5d50b3",
+                "reference": "b9fb36c7253253b468c5e5eef02a0ec1ce5d50b3",
                 "shasum": ""
             },
             "require": {
@@ -662,15 +662,16 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.39",
-                "jane-php/json-schema": "^7.5"
+                "jane-php/json-schema": "^7.5",
+                "phpunit/phpunit": "^10"
             },
             "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Lenra\\App\\": "src/",
-                    "Lenra\\App\\Components\\Json\\": "generated/components/json",
-                    "Lenra\\App\\Components\\Lenra\\": "generated/components/lenra"
+                    "Lenra\\App\\Response\\View\\": "generated/Response/View",
+                    "Lenra\\App\\Base\\": "generated/Base"
                 }
             },
             "autoload-dev": {
@@ -691,7 +692,7 @@
                 "source": "https://github.com/lenra-io/app-lib-php/tree/main",
                 "issues": "https://github.com/lenra-io/app-lib-php/issues"
             },
-            "time": "2023-11-22T16:04:35+00:00"
+            "time": "2023-11-27T16:46:10+00:00"
         },
         {
             "name": "lenra/internal-api-client",
@@ -1355,12 +1356,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "c54e51c06a07100ff9985aabfd5b00bc0e8607d0"
+                "reference": "ac2d25f97b17eec6e19760b6b9962a4f7c44356a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/c54e51c06a07100ff9985aabfd5b00bc0e8607d0",
-                "reference": "c54e51c06a07100ff9985aabfd5b00bc0e8607d0",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/ac2d25f97b17eec6e19760b6b9962a4f7c44356a",
+                "reference": "ac2d25f97b17eec6e19760b6b9962a4f7c44356a",
                 "shasum": ""
             },
             "require": {
@@ -1443,7 +1444,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-11-21T09:41:01+00:00"
+            "time": "2023-11-24T19:28:07+00:00"
         },
         {
             "name": "symfony/cache-contracts",
@@ -1759,12 +1760,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/serializer.git",
-                "reference": "d5ab8c59026c283ab0e2ed8ca76d50af6de3d237"
+                "reference": "ff423e8e466cc0b0cc01add8e9494d11abfd906e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/serializer/zipball/d5ab8c59026c283ab0e2ed8ca76d50af6de3d237",
-                "reference": "d5ab8c59026c283ab0e2ed8ca76d50af6de3d237",
+                "url": "https://api.github.com/repos/symfony/serializer/zipball/ff423e8e466cc0b0cc01add8e9494d11abfd906e",
+                "reference": "ff423e8e466cc0b0cc01add8e9494d11abfd906e",
                 "shasum": ""
             },
             "require": {
@@ -1849,7 +1850,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-11-21T08:45:57+00:00"
+            "time": "2023-11-25T00:26:43+00:00"
         },
         {
             "name": "symfony/service-contracts",
