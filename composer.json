@@ -4,11 +4,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Data\\": "public/classes"
+            "App\\": "public"
         }
     },
     "require": {
-        "lenra/app": "^1.0.0-beta.1"
+        "lenra/app": "dev-classes"
     },
     "minimum-stability": "dev"
 }
