@@ -7,7 +7,7 @@ generator:
           - "composer.json"
           - "composer.lock"
         run:
-          - composer install --prefer-dist --no-scripts --no-dev --no-autoloader --no-progress --no-suggest --no-interaction
+          - composer install --prefer-dist --no-scripts --no-dev --no-autoloader --no-progress --no-suggest --no-interaction -o -a --apcu-autoloader
         caches:
           - /root/.composer
       - name: files
@@ -22,10 +22,10 @@ generator:
         from: composer-install
         artifacts:
           - builder: files
-            source: /app/public
-            destination: /app/public
+            source: /app/src
+            destination: /app/src
         run: 
-          - composer dump-autoload --optimize
+          - composer dump-autoload --optimize --classmap-authoritative --apcu
     from: files
     artifacts:
       - builder: composer-autoload
@@ -43,6 +43,6 @@ generator:
       - 3000
     ignores:
       - "**"
-      - "!/public/"
+      - "!/src/"
       - "!/composer.*"
       - "!/config/"

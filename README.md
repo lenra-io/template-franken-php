@@ -5,7 +5,7 @@ Local development environment for PHP projects.
 # Install dependencies
 docker run --rm --interactive --tty -v $PWD:/app composer install
 # Start the server
-docker run --name frankenphp --rm -it -v $PWD/src:/app/public -v $PWD/vendor:/app/vendor -p 8080:8080 -e 'SERVER_NAME=:8080' dunglas/frankenphp
+docker run --name frankenphp --rm -it -v $PWD/src:/app/src -v $PWD/vendor:/app/vendor -p 8080:8080 -e 'SERVER_NAME=:8080' dunglas/frankenphp
 ```
 
 Local deps:
