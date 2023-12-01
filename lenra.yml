@@ -17,6 +17,7 @@ generator:
         root: 
           run:
             - mv /app/config/php.ini $PHP_INI_DIR/php.ini
+            - pecl install apcu
       - name: composer-autoload
         from: composer-install
         artifacts:

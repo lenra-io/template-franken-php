@@ -471,12 +471,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/uri.git",
-                "reference": "b009e3b8ad4cdd8f54c08564672846e166d96c01"
+                "reference": "bf414ba956d902f5d98bf9385fcf63954f09dce5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri/zipball/b009e3b8ad4cdd8f54c08564672846e166d96c01",
-                "reference": "b009e3b8ad4cdd8f54c08564672846e166d96c01",
+                "url": "https://api.github.com/repos/thephpleague/uri/zipball/bf414ba956d902f5d98bf9385fcf63954f09dce5",
+                "reference": "bf414ba956d902f5d98bf9385fcf63954f09dce5",
                 "shasum": ""
             },
             "require": {
@@ -546,7 +546,7 @@
                 "docs": "https://uri.thephpleague.com",
                 "forum": "https://thephpleague.slack.com",
                 "issues": "https://github.com/thephpleague/uri-src/issues",
-                "source": "https://github.com/thephpleague/uri/tree/master"
+                "source": "https://github.com/thephpleague/uri/tree/7.4.0"
             },
             "funding": [
                 {
@@ -554,7 +554,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-24T15:40:42+00:00"
+            "time": "2023-12-01T06:24:25+00:00"
         },
         {
             "name": "league/uri-interfaces",
@@ -631,7 +631,7 @@
                 "docs": "https://uri.thephpleague.com",
                 "forum": "https://thephpleague.slack.com",
                 "issues": "https://github.com/thephpleague/uri-src/issues",
-                "source": "https://github.com/thephpleague/uri-interfaces/tree/master"
+                "source": "https://github.com/thephpleague/uri-interfaces/tree/7.4.0"
             },
             "funding": [
                 {
@@ -647,12 +647,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lenra-io/app-lib-php.git",
-                "reference": "3551372a569f367d45c3076d39a31cebbb82d422"
+                "reference": "65657a97a15002ece4b7963942b3e8561bb0fec1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lenra-io/app-lib-php/zipball/3551372a569f367d45c3076d39a31cebbb82d422",
-                "reference": "3551372a569f367d45c3076d39a31cebbb82d422",
+                "url": "https://api.github.com/repos/lenra-io/app-lib-php/zipball/65657a97a15002ece4b7963942b3e8561bb0fec1",
+                "reference": "65657a97a15002ece4b7963942b3e8561bb0fec1",
                 "shasum": ""
             },
             "require": {
@@ -691,7 +691,7 @@
                 "issues": "https://github.com/lenra-io/app-lib-php/issues",
                 "source": "https://github.com/lenra-io/app-lib-php/tree/classes"
             },
-            "time": "2023-11-30T17:03:11+00:00"
+            "time": "2023-12-01T11:19:47+00:00"
         },
         {
             "name": "lenra/internal-api-client",
