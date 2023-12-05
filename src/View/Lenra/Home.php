@@ -2,7 +2,7 @@
 
 namespace App\View\Lenra;
 
-use Data\Counter;
+use App\Data\Counter;
 use Lenra\App\Components\Base\Builder;
 use Lenra\App\Components\Flex;
 use Lenra\App\Components\View;

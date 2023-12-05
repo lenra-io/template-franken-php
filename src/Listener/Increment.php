@@ -2,7 +2,7 @@
 
 namespace App\Listener;
 
-use Data\Counter;
+use App\Data\Counter;
 use Lenra\App\Listener\Handler;
 use Lenra\App\Listener\Request;
 

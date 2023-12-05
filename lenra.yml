@@ -1,23 +1,34 @@
 generator:
   dofigen:
     builders:
+      # Install composer dependencies
       - name: composer-install
         from: composer
         adds:
           - "composer.json"
           - "composer.lock"
         run:
-          - composer install --prefer-dist --no-scripts --no-dev --no-autoloader --no-progress --no-suggest --no-interaction -o -a --apcu-autoloader
+          - composer install --prefer-dist --no-scripts --no-dev --no-autoloader --no-progress --no-interaction -o -a --apcu-autoloader
         caches:
           - /root/.composer
-      - name: files
+      # Install php extensions
+      - name: install-extensions
         from: dunglas/frankenphp
+        root: 
+          run:
+            - pecl install apcu
+        cache:
+          - /usr/local/lib/php/extensions
+      # Copy files and put php.ini in place
+      - name: files
+        from: install-extensions
         adds:
           - "."
         root: 
           run:
             - mv /app/config/php.ini $PHP_INI_DIR/php.ini
-            - pecl install apcu
+            - chmod 777 /config/caddy/
+      # Generate composer autoload
       - name: composer-autoload
         from: composer-install
         artifacts:
@@ -26,6 +37,7 @@ generator:
             destination: /app/src
         run: 
           - composer dump-autoload --optimize --classmap-authoritative --apcu
+    # Runtime image
     from: files
     artifacts:
       - builder: composer-autoload

@@ -1,5 +1,5 @@
 <?php
-namespace Data;
+namespace App\Data;
 
 class Counter extends \Lenra\App\Data {
     public string $user;

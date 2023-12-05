@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Data\Counter;
+use App\Data\Counter;
 use Lenra\App\Components\View;
 use Lenra\App\Components\View\Definitions\Find;
 use Lenra\App\Manifest as AppManifest;

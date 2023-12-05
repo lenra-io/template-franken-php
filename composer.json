@@ -10,7 +10,6 @@
         }
     },
     "require": {
-        "lenra/app": "dev-classes"
-    },
-    "minimum-stability": "dev"
+        "lenra/app": "^1"
+    }
 }
