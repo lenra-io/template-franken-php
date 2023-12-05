@@ -1,0 +1,60 @@
+generator:
+  dofigen:
+    builders:
+      # Install composer dependencies
+      - name: composer-install
+        from: composer
+        adds:
+          - "composer.json"
+          - "composer.lock"
+        run:
+          - composer install --prefer-dist --no-scripts --no-dev --no-autoloader --no-progress --no-interaction -o -a --apcu-autoloader
+        caches:
+          - /root/.composer
+      # Install php extensions
+      - name: install-extensions
+        from: dunglas/frankenphp
+        root: 
+          run:
+            - pecl install apcu
+        cache:
+          - /usr/local/lib/php/extensions
+      # Copy files and put php.ini in place
+      - name: files
+        from: install-extensions
+        adds:
+          - "."
+        root: 
+          run:
+            - mv /app/config/php.ini $PHP_INI_DIR/php.ini
+            - chmod 777 /config/caddy/
+      # Generate composer autoload
+      - name: composer-autoload
+        from: composer-install
+        artifacts:
+          - builder: files
+            source: /app/src
+            destination: /app/src
+        run: 
+          - composer dump-autoload --optimize --classmap-authoritative --apcu
+    # Runtime image
+    from: files
+    artifacts:
+      - builder: composer-autoload
+        source: /app/vendor
+        destination: /app/vendor
+    cmd:
+      - docker-php-entrypoint
+      - --config
+      - /app/config/Caddyfile
+      - --adapter
+      - caddyfile
+    healthcheck:
+      cmd: curl -f http://localhost:2019/metrics || exit 1
+    ports:
+      - 3000
+    ignores:
+      - "**"
+      - "!/src/"
+      - "!/composer.*"
+      - "!/config/"
