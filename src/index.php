@@ -8,7 +8,6 @@ ignore_user_abort(true);
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $handler = static function () {
-    \Lenra\App\Logger::log("handle request");
     \Lenra\App\Runner::run();
 };
 
