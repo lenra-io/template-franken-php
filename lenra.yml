@@ -43,16 +43,12 @@ generator:
       - builder: composer-autoload
         source: /app/vendor
         destination: /app/vendor
-    envs:
-      MAX_REQUESTS: "50"
     cmd:
       - docker-php-entrypoint
       - --config
       - /app/config/Caddyfile
       - --adapter
       - caddyfile
-    # healthcheck:
-    #   cmd: curl -f http://localhost:2019/metrics || exit 1
     ports:
       - 3000
     ignores:
