@@ -1,8 +1,10 @@
 {      
   {$CADDY_GLOBAL_OPTIONS}
+
+  admin off
             
   frankenphp {
-    #worker /path/to/your/worker.php
+    worker /app/src/index.php
     {$FRANKENPHP_CONFIG}
   }
 
