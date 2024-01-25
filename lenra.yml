@@ -49,8 +49,6 @@ generator:
       - /app/config/Caddyfile
       - --adapter
       - caddyfile
-    healthcheck:
-      cmd: curl -f http://localhost:2019/metrics || exit 1
     ports:
       - 3000
     ignores:
